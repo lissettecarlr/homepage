@@ -21,7 +21,10 @@ log "Start copying homepage"
 
 # Backup existing homepage before removing
 if [ -d /var/www/homepage ]; then
-    mv /var/www/homepage /var/www/homepage.bak || { log "Failed to backup existing homepage"; exit 1; }
+    backup_dir="/var/www/homepage.bak"
+    rm -rf "$backup_dir" || { log "Failed to remove old backup"; exit 1; }
+    mv /var/www/homepage "$backup_dir" || { log "Failed to backup existing homepage"; exit 1; }
+    log "Homepage backed up to $backup_dir"
 fi
 
 # Copy new homepage
