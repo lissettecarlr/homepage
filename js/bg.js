@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const desktopImages = [
         'images/desktop1.jpg',
         'images/desktop2.jpg',
+        'images/desktop3.jpg',
     ];
 
     // 检测是否是手机访问
