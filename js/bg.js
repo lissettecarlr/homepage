@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
         'images/desktop1.jpg',
         'images/desktop2.jpg',
         'images/desktop3.jpg',
+        'images/desktop4.png',
+        'images/desktop5.png',
     ];
 
     // 检测是否是手机访问
