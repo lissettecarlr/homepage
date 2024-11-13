@@ -1208,6 +1208,7 @@ body.is-loading #bg:before {
 			line-height: 5.5rem;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
+			overflow: clip;
 		}
 
 			#header .logo .icon:before {
