@@ -1,12 +1,19 @@
-<html class="ext-strict"><head>
-    <title> 久远的主页 </title>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>久远的主页</title>
     <meta name="keywords" content="久远 | 卡拉">
     <meta name="description" content="用于快速导航到我的各类站点">
-    <!-- <link rel="shortcut icon" href="favicon.ico" tppabs="favicon.ico"> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="author" content="久远·卡拉">
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <!-- 样式和图标 -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="./images/logo/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./images/logo/android-chrome-192x192.png">
     <noscript><link rel="stylesheet" href="css/noscript.css"></noscript>
 
 <script>//remove baidu search ad
@@ -18,56 +25,55 @@ document.addEventListener('keyup', function(){_countAA-=10;doBBBd()}, false)
 document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
 
 </script></head>
-<body class="ext-webkit ext-chrome" id="syno-nsc-ext-gen3"> 
-
+<body>
     <!-- Wrapper -->
-        <div id="wrapper">
-
-            <!-- Header -->
-                <header id="header">
-                <div class="icon"> 
-                    <img src="./images/logo/android-chrome-192x192.png" alt="AEINK" title="AEINK" class="logo" /> 
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <div class="icon"> 
+                <img src="./images/logo/android-chrome-192x192.png" alt="久远·卡拉" title="久远·卡拉" class="logo" loading="eager" /> 
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>久远·卡拉的主页</h1>
+                    <p>用于快速导航到我的各类站点</p>
+                    <p>邮件：<a href="mailto:lissettecarlr@163.com">lissettecarlr@163.com</a></p>
                 </div>
-                    <div class="content">
-                        <div class="inner">
-                            <h1>久远·卡拉的主页</h1>
-                            <p>用于快速导航到我的各类站点</p>
-                            <p>最近使用了cloudflare，如发现访问异常，愿联系</p>
-                            <p>邮件：lissettecarlr@163.com</p>
-                        </div>
-                    </div>
-                    <nav class="use-middle">
-                        <ul>
-                            <li><a href="https://blog.kala.love" target="_blank">博客/主页</a></li>
-                            <li><a href="https://blog.kala.love/categories/技术类/" target="_blank">博客/专业</a></li>
-                            <li class="is-middle"><a href="https://blog.kala.love/categories/摄影/" target="_blank">博客/摄影</a></li>
-                            <li><a href="https://blog.kala.love/about/" target="_blank">关于我</a></li>                            
-                        </ul>
-                        <ul>
-                            <li><a href="https://mem.kala.love" target="_blank">说说</a></li>
-                            <li><a href="https://lissettecarlr.github.io/" target="_blank">网页书签</a></li>
-                            <li class="is-middle"><a href="https://photo.kala.love/" target="_blank">缓存图库</a></li>
-                            <li><a href="https://uptime.kala.love/" target="_blank">站点状态</a></li>                            
-                        </ul>
-                    </nav>
-                </header>
-
-          
-            <!-- Footer -->
-                <footer id="footer">
-                    <!-- <p class="copyright">©2021 <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">渝ICP备2021002648号</a> </p> -->
-                    <p class="copyright">©2021 </p>
-                </footer>
-
-        </div>
+            </div>
+            <nav class="use-middle">
+                <ul>
+                    <li><a href="https://blog.kala.love" target="_blank" rel="noopener">博客/主页</a></li>
+                    <li><a href="https://blog.kala.love/categories/技术类/" target="_blank" rel="noopener">博客/专业</a></li>
+                    <li class="is-middle"><a href="https://blog.kala.love/categories/摄影/" target="_blank" rel="noopener">博客/摄影</a></li>
+                    <li><a href="https://blog.kala.love/about/" target="_blank" rel="noopener">关于我</a></li>                            
+                </ul>
+                <ul>
+                    <li><a href="https://mem.kala.love" target="_blank" rel="noopener">说说</a></li>
+                    <li><a href="https://lissettecarlr.github.io/" target="_blank" rel="noopener">网页书签</a></li>
+                    <li class="is-middle"><a href="https://photo.kala.love/" target="_blank" rel="noopener">缓存图库</a></li>
+                    <li><a href="https://uptime.kala.love/" target="_blank" rel="noopener">站点状态</a></li>                            
+                </ul>
+            </nav>
+        </header>
+      
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">&copy; 2021-<span id="current-year"></span> 久远·卡拉</p>
+        </footer>
+    </div>
 
     <!-- BG -->
-        <div id="bg"></div>
-        <script src="js/bg.js"></script>
+    <div id="bg"></div>
+    
     <!-- Scripts -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/skel.min.js"></script>
-        <script src="js/util.js"></script>
-        <script src="js/main.js"></script>
-
-</body></html>
+    <script>
+        // 更新页脚年份
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/bg.js" defer></script>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/skel.min.js" defer></script>
+    <script src="js/util.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
