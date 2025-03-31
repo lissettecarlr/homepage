@@ -1,0 +1,74 @@
+/**
+ * 全局CSS变量
+ * 设置全站统一的主题颜色、间距、过渡动画等
+ */
+
+:root {
+  /* 颜色 */
+  --text-color: #ffffff;
+  --bg-color: #1b1f22;
+  --overlay-color: rgba(19, 21, 25, 0.5);
+  --accent-color: rgba(255, 255, 255, 0.075);
+  --accent-color-active: rgba(255, 255, 255, 0.175);
+  --border-color: #ffffff;
+  
+  /* 过渡动画 */
+  --transition-short: 0.2s ease-in-out;
+  --transition-medium: 0.325s ease-in-out;
+  --transition-long: 0.75s ease-in-out;
+  
+  /* 间距 */
+  --spacing-xs: 0.5rem;
+  --spacing-small: 1rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 3rem;
+  --spacing-xl: 4rem;
+  
+  /* 字体大小 */
+  --font-size-xs: 0.6rem;
+  --font-size-small: 0.8rem;
+  --font-size-normal: 1rem;
+  --font-size-medium: 1.5rem;
+  --font-size-large: 2.25rem;
+  
+  /* 圆角 */
+  --border-radius: 4px;
+  
+  /* 字体 */
+  --font-family: "Source Sans Pro", var(--system-font);
+  
+  /* 其他 */
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --letter-spacing: 0.2rem;
+  --letter-spacing-wide: 0.5rem;
+}
+
+/* 深色主题 (默认) */
+:root {
+  color-scheme: dark;
+}
+
+/* 响应式字体大小 */
+@media screen and (max-width: 1680px) {
+  :root {
+    font-size: 12pt;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  :root {
+    font-size: 11pt;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    font-size: 10pt;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  :root {
+    font-size: 9pt;
+  }
+} 
