@@ -28,7 +28,7 @@
         <!-- Header -->
         <header id="header">
             <div class="icon"> 
-                <img src="./images/logo/kuon2_lite.jpg" alt="久远·卡拉" class="logo" loading="eager" fetchpriority="high" /> 
+                <img id="random-kuon-img" src="./images/kuon/kuon1.jpg" alt="久远·卡拉" class="logo" loading="eager" fetchpriority="high" /> 
             </div>
             <div class="content">
                 <div class="inner">
@@ -74,6 +74,11 @@
         
         // 更新页脚年份
         document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // 随机显示久远图片
+        const kuonImages = ['kuon1.jpg', 'kuon2.jpg'];
+        const randomIndex = Math.floor(Math.random() * kuonImages.length);
+        document.getElementById('random-kuon-img').src = './images/kuon/' + kuonImages[randomIndex];
     });
     </script>
 </body>
